@@ -1,0 +1,7 @@
+spring:
+    data:
+        mongodb:
+            authentication-database: admin
+            database: student_db
+            host: localhost
+            port: 27017
