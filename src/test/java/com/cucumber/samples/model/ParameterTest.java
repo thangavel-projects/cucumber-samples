@@ -1,5 +1,6 @@
 package com.cucumber.samples.model;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.jupiter.api.Assertions;
@@ -8,6 +9,7 @@ public class ParameterTest {
 
     private String name;
     private int salary;
+    private String password;
 
     @When("Customer salary is {int} and name is {string}")
     public void customerSalaryIsAndNameIs(int salary, String name) {
@@ -23,5 +25,16 @@ public class ParameterTest {
 
     }
 
+    @When("^pass (.*?) and (.*?)$")
+    public void passUsernameAndPassword(String user, String password) {
+        this.name = user;
+        this.password = password;
+    }
 
+
+    @Then("^verify names$")
+    public void verifyNames() {
+        Assertions.assertEquals("gold", name);
+        Assertions.assertEquals("admin", password);
+    }
 }
