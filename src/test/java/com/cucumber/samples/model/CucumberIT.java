@@ -10,8 +10,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 @RunWith(Cucumber.class)
 @CucumberContextConfiguration
 @SpringBootTest(classes = {CucumberApplication.class, CucumberIT.class},
-                webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@CucumberOptions(plugin = {"pretty"}, features = "src/test/resources/features")
+        webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@CucumberOptions(plugin = {"pretty"}, features = "src/test/resources/features", glue = {"com.cucumber.samples.model"})
 public class CucumberIT {
 
 }
