@@ -32,9 +32,9 @@ public class ParameterTest {
     }
 
 
-    @Then("^verify names$")
-    public void verifyNames() {
-        Assertions.assertEquals("gold", name);
-        Assertions.assertEquals("admin", password);
+    @Then("^verify names (.*?) and (.*?)$")
+    public void verifyNames(String expectedU, String expectedP) {
+        Assertions.assertEquals(expectedU, name);
+        Assertions.assertEquals(expectedP, password);
     }
 }

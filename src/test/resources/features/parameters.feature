@@ -5,7 +5,8 @@ Feature: Display Parameters in Glue Code
 
   Scenario Outline: Send multiple test data
     When pass <username> and <password>
-    Then verify names
+    Then verify names <expectedU> and <expectedP>
   Examples:
-    | username  |   password  |
-    | gold      |   admin     |
+    | username  |   password  |   expectedU  |  expectedP   |
+    | gold      |   admin     |   gold       |  admin       |
+    | gold1     |   admin1    |   gold1      |  admin1      |
