@@ -30,7 +30,6 @@ public class AuthenticationControllerIT {
     public void whenInvokeAuthController(){
         ResponseEntity<Application[]> forEntity = testRestTemplate.getForEntity(url, Application[].class);
         applications = Arrays.asList(Objects.requireNonNull(forEntity.getBody()));
-        System.out.println(applications);
     }
 
     @When("^Validate username and password$")
