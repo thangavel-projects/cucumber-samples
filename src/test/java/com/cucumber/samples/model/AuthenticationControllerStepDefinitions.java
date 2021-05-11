@@ -13,7 +13,7 @@ import java.util.Objects;
 import static org.junit.Assert.assertEquals;
 
 
-public class AuthenticationControllerIT {
+public class AuthenticationControllerStepDefinitions {
 
     @Autowired
     private TestRestTemplate testRestTemplate;

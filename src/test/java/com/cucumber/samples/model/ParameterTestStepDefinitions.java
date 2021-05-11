@@ -4,7 +4,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.jupiter.api.Assertions;
 
-public class ParameterTest {
+public class ParameterTestStepDefinitions {
 
     private String name;
     private int salary;
