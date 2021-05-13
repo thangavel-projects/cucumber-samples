@@ -14,4 +14,3 @@ Feature: Display Parameters in Glue Code
       | username | password | expectedU | expectedP |
       | gold     | admin    | gold      | admin     |
       | gold1    | admin1   | gold1     | admin1    |
-
